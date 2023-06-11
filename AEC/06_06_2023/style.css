@@ -1,0 +1,51 @@
+.div1 {
+    text-align: center;
+    background-color: rgb(12, 77, 55);
+    color: rgb(183, 139, 43);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.para {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.anchor {
+    color: bisque;
+}
+
+.header {
+    background-color: rgb(34, 201, 201);
+    text-align: center;
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.footer {
+    background-color: rgb(123, 22, 83);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
