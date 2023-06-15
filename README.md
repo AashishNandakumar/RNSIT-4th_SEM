@@ -12,3 +12,9 @@ This repository will contain programs done in 4th SEM
 > Crafted out of pure HTML
 
 ![webpage_2](https://github.com/AashishNandakumar/RNSIT-4th_SEM/assets/98106129/ac573b2f-357d-470f-a9aa-fc06c291def3)
+
+---
+
+## DAA
+For accessing the code use the following direction:
+> DAA --> src --> Lab_n
