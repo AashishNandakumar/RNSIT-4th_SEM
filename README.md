@@ -31,6 +31,19 @@
 
 ![Form_rnsit](https://github.com/AashishNandakumar/RNSIT-4th_SEM/assets/98106129/b296b9e2-a30d-4844-a8d2-746d35289d8a)
 
+7. &nbsp; <a href="https://github.com/AashishNandakumar/RNSIT-4th_SEM/blob/main/AEC/No_Date/feedbackRadioButtons.html">Radio buttons feedback</a> (AEC)
+
+![feedback](https://github.com/AashishNandakumar/RNSIT-4th_SEM/assets/98106129/06fd03c5-a34b-438b-aa7b-3c107d20f8c3)
+
+
+8. &nbsp; <a href="https://github.com/AashishNandakumar/RNSIT-4th_SEM/blob/main/AEC/No_Date/jobApplication.html">Job Application</a> (AEC)
+
+![jobApplication](https://github.com/AashishNandakumar/RNSIT-4th_SEM/assets/98106129/45615ec0-89ce-49cd-bb29-e06b56495383)
+
+9. &nbsp; <a href="https://github.com/AashishNandakumar/RNSIT-4th_SEM/blob/main/AEC/10_07_2023/Menu.html">Food Menu Card</a> (AEC)
+
+![menu](https://github.com/AashishNandakumar/RNSIT-4th_SEM/assets/98106129/cf65da8b-b25f-4d18-9ce8-9c088b5efd0d)
+
 ---
 
 ## DAA
