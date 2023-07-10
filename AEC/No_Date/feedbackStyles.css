@@ -1,0 +1,17 @@
+h1, h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    border: 1px solid pink;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+hr:nth-of-type(2) {
+    border: 2px solid black
+}
