@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    margin: 0 auto;
+}
+
+.ordered1>li {
+    letter-spacing: 0.1em;
+}
