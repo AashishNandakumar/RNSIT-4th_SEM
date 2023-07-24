@@ -1,11 +1,7 @@
-h1 {
-    text-align: center;
+.ex {
+    color: red;
 }
 
-section {
-    margin: 0 auto;
-}
-
-.ordered1>li {
-    letter-spacing: 0.1em;
+li {
+    color: blue;
 }
