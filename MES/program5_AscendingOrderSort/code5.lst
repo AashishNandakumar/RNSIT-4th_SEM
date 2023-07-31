@@ -1,0 +1,89 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SORT_ASCENDING_ORDER, CODE, REA
+DONLY
+    2 00000000         ENTRY
+    3 00000000 E3A01005        MOV              R1, #5      ;LENGTH OF ARRAY
+    4 00000004         OUTLOOP
+    5 00000004 E1A03001        MOV              R3, R1
+    6 00000008 E3A00101        LDR              R0, =0X40000000
+    7 0000000C         INLOOP
+    8 0000000C E4902004        LDR              R2, [R0], #4
+    9 00000010 E5904000        LDR              R4, [R0]
+   10 00000014 E1540002        CMP              R4, R2
+   11 00000018 2A000001        BCS              SKIP        ;IGNORE IF CARRY IS
+                                                             SET OR GREATER THA
+                                                            N CONDN OCCURES
+   12 0000001C E4002004        STR              R2, [R0], #-4 ;SWAP IF SMALLER
+   13 00000020 E4804004        STR              R4, [R0], #4
+   14 00000024         SKIP
+   15 00000024 E2533001        SUBS             R3, R3, #1
+   16 00000028 1AFFFFF7        BNE              INLOOP
+   17 0000002C E2511001        SUBS             R1, R1, #1
+   18 00000030 1AFFFFF3        BNE              OUTLOOP
+   19 00000034 EAFFFFFE 
+                       STOP    B                STOP
+   20 00000038                 END
+Command Line: --debug --xref --apcs=interwork --depend=code5.d -ocode5.o -IC:\K
+eil\ARM\RV31\Inc -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=code5.lst code5.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file code5.asm
+   Uses
+      None
+Comment: ENTRY unused
+INLOOP 0000000C
+
+Symbol: INLOOP
+   Definitions
+      At line 7 in file code5.asm
+   Uses
+      At line 16 in file code5.asm
+Comment: INLOOP used once
+OUTLOOP 00000004
+
+Symbol: OUTLOOP
+   Definitions
+      At line 4 in file code5.asm
+   Uses
+      At line 18 in file code5.asm
+Comment: OUTLOOP used once
+SKIP 00000024
+
+Symbol: SKIP
+   Definitions
+      At line 14 in file code5.asm
+   Uses
+      At line 11 in file code5.asm
+Comment: SKIP used once
+SORT_ASCENDING_ORDER 00000000
+
+Symbol: SORT_ASCENDING_ORDER
+   Definitions
+      At line 1 in file code5.asm
+   Uses
+      None
+Comment: SORT_ASCENDING_ORDER unused
+STOP 00000034
+
+Symbol: STOP
+   Definitions
+      At line 19 in file code5.asm
+   Uses
+      At line 19 in file code5.asm
+Comment: STOP used once
+6 symbols
+337 symbols in table

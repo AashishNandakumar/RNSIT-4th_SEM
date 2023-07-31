@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Aashish Nandakumar\Desktop\ARM\program9_SmallestInArray\code9.uvproj
+Project File Date:  <unknown>
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling code9.asm...
+linking...
+Program Size: Code=64 RO-data=0 RW-data=0 ZI-data=0  
+"code9.axf" - 0 Error(s), 0 Warning(s).

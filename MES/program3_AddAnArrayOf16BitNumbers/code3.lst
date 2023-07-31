@@ -1,0 +1,110 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ADD_NOS_FROM_ARRAY, CODE, READO
+NLY
+    2 00000000         ENTRY
+    3 00000000 E3A00000        MOV              R0, #0      ;HOLDS THE SUM
+    4 00000004 E59F1034        LDR              R1, =TABLE
+    5 00000008 E3A02006        MOV              R2, #6      ; HOLDS THE LENGTH 
+                                                            OF ARRAY
+    6 0000000C E59F4030        LDR              R4, =RES
+    7 00000010         LOOP
+    8 00000010 E0D130B2        LDRH             R3, [R1], #2
+    9 00000014 E0800003        ADD              R0, R0, R3
+   10 00000018 E2522001        SUBS             R2, R2, #1
+   11 0000001C 1AFFFFFB        BNE              LOOP
+   12 00000020 E5840000        STR              R0, [R4]
+   13 00000024 EAFFFFFE 
+                       STOP    B                STOP
+   14 00000028         
+   15 00000028         TABLE
+   16 00000028 00001111 
+              00002222 
+              00003333 
+              00004444 
+              00005555 
+              00006666         DCD              0X1111, 0X2222, 0X3333, 0X4444,
+ 0X5555, 0X6666
+   17 00000040 00000000 
+              00000000         AREA             DATA1, DATA, READWRITE
+   18 00000000         RES
+   19 00000000 00000000        DCD              0X0
+   20 00000004                 END
+Command Line: --debug --xref --apcs=interwork --depend=code3.d -ocode3.o -IC:\K
+eil\ARM\RV31\Inc -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=code3.lst code3.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADD_NOS_FROM_ARRAY 00000000
+
+Symbol: ADD_NOS_FROM_ARRAY
+   Definitions
+      At line 1 in file code3.asm
+   Uses
+      None
+Comment: ADD_NOS_FROM_ARRAY unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file code3.asm
+   Uses
+      None
+Comment: ENTRY unused
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 7 in file code3.asm
+   Uses
+      At line 11 in file code3.asm
+Comment: LOOP used once
+STOP 00000024
+
+Symbol: STOP
+   Definitions
+      At line 13 in file code3.asm
+   Uses
+      At line 13 in file code3.asm
+Comment: STOP used once
+TABLE 00000028
+
+Symbol: TABLE
+   Definitions
+      At line 15 in file code3.asm
+   Uses
+      At line 4 in file code3.asm
+Comment: TABLE used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA1 00000000
+
+Symbol: DATA1
+   Definitions
+      At line 17 in file code3.asm
+   Uses
+      None
+Comment: DATA1 unused
+RES 00000000
+
+Symbol: RES
+   Definitions
+      At line 18 in file code3.asm
+   Uses
+      At line 6 in file code3.asm
+Comment: RES used once
+2 symbols
+340 symbols in table

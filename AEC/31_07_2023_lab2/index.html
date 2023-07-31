@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Enter Details</h1>
+    <form>
+      <section class="Form1">
+        <div class="div">
+          <input type="text" placeholder="Username" />&emsp;
+          <input type="password" placeholder="Password" />&emsp13;
+        </div>
+        <div class="div">
+          <input type="email" placeholder="Email" />&emsp;
+          <input type="number" placeholder="Phone number" />&emsp13;
+        </div>
+        <div class="div">
+          <label><span>Choose gender:</span>&emsp;</label>
+          <input type="radio" placeholder="Email" id="M" name="g" />
+          <label for="M">Male</label>&emsp;
+          <input type="radio" placeholder="Phone number" id="F" name="g" />
+          <label for="F">Female</label>
+        </div>
+        <div class="div">
+          <label for=""><span>Educational Qualification:</span>&emsp;</label>
+          <select>
+            <option>---Choose---</option>
+            <option>Matriculation</option>
+            <option>Higher-secondary</option>
+            <option>Graduate</option>
+            <option>Post-graduate</option>
+          </select>
+        </div>
+        <div class="div">
+          <label for=""><span>Hobbies:</span> &emsp;</label>
+          <input type="checkbox" placeholder="Email" id="C" />
+          <label for="C">Chess</label>&emsp;
+          <input type="checkbox" placeholder="Phone number" id="S" />
+          <label for="S">Swimming</label>&emsp;
+          <input type="checkbox" placeholder="Phone number" id="R" />
+          <label for="R">Reading</label>&emsp;
+          <input type="checkbox" placeholder="Phone number" id="B" />
+          <label for="B">Badminton</label>
+        </div>
+        <div class="div">
+          <label><span>Address:</span> &emsp13;</label><br />
+          <textarea></textarea>
+        </div>
+        <div class="div">
+          <label><span>Attach resume:</span>&emsp13;</label>
+          <input type="file" />
+        </div>
+        <button>Submit</button>
+      </section>
+    </form>
+  </body>
+</html>

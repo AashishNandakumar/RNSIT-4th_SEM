@@ -1,0 +1,19 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Aashish Nandakumar\Desktop\ARM\program4_SquareOfANoUsingLookUpTable\code4.uvproj
+Project File Date:  <unknown>
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling code4.asm...
+code4.asm(8): error: A1163E: Unknown opcode LOOKUP , expecting opcode or Macro
+Target not created
+Build target 'Target 1'
+assembling code4.asm...
+code4.asm(10): warning: A1581W: Added 1 bytes of padding at address 0x1f
+linking...
+Program Size: Code=36 RO-data=0 RW-data=0 ZI-data=0  
+"code4.axf" - 0 Error(s), 1 Warning(s).

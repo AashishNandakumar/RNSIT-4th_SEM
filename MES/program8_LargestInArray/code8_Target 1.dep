@@ -1,0 +1,2 @@
+Dependencies for Project 'code8', Target 'Target 1': (DO NOT MODIFY !)
+F (.\code8.asm)(0x64C7DCFF)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "code8.lst" --xref -o "code8.o" --depend "code8.d")

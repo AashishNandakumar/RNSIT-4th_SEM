@@ -1,0 +1,85 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             LARGEST_IN_ARRAY, CODE, READONL
+Y
+    2 00000000         ENTRY
+    3 00000000 E59F0034        LDR              R0, =TABLE
+    4 00000004 E3A01006        MOV              R1, #6
+    5 00000008 E4902004        LDR              R2, [R0], #4
+    6 0000000C         LOOP
+    7 0000000C E4903004        LDR              R3, [R0], #4
+    8 00000010 E1520003        CMP              R2, R3      ;CARRY WILL BE SET 
+                                                            INDICATING LESS THA
+                                                            N CONDN
+    9 00000014 31A02003        MOVLO            R2, R3      ; MOVE IF LESS THAN
+                                                             FLAG IS SET . 
+   10 00000018 E2511001        SUBS             R1, R1, #1
+   11 0000001C 1AFFFFFA        BNE              LOOP
+   12 00000020 EAFFFFFE 
+                       STOP    B                STOP
+   13 00000024         
+   14 00000024         TABLE
+   15 00000024 00001111 
+              00002222 
+              00003333 
+              00004444 
+              00005555 
+              00006666         DCD              0X1111, 0X2222, 0X3333, 0X4444,
+ 0X5555, 0X6666
+   16 0000003C                 END
+              00000000 
+Command Line: --debug --xref --apcs=interwork --depend=code8.d -ocode8.o -IC:\K
+eil\ARM\RV31\Inc -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=code8.lst code8.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file code8.asm
+   Uses
+      None
+Comment: ENTRY unused
+LARGEST_IN_ARRAY 00000000
+
+Symbol: LARGEST_IN_ARRAY
+   Definitions
+      At line 1 in file code8.asm
+   Uses
+      None
+Comment: LARGEST_IN_ARRAY unused
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 6 in file code8.asm
+   Uses
+      At line 11 in file code8.asm
+Comment: LOOP used once
+STOP 00000020
+
+Symbol: STOP
+   Definitions
+      At line 12 in file code8.asm
+   Uses
+      At line 12 in file code8.asm
+Comment: STOP used once
+TABLE 00000024
+
+Symbol: TABLE
+   Definitions
+      At line 14 in file code8.asm
+   Uses
+      At line 3 in file code8.asm
+Comment: TABLE used once
+5 symbols
+338 symbols in table

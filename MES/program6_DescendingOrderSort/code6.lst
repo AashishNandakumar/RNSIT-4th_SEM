@@ -1,0 +1,87 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             DESENDING_ORDER_SORT, CODE, REA
+DONLY
+    2 00000000         ENTRY
+    3 00000000 E3A00005        MOV              R0, #5
+    4 00000004         OUTLOOP
+    5 00000004 E1A01000        MOV              R1, R0
+    6 00000008 E3A02101        LDR              R2, =0X40000000
+    7 0000000C         INLOOP
+    8 0000000C E4923004        LDR              R3, [R2], #4
+    9 00000010 E5924000        LDR              R4, [R2]
+   10 00000014 E1540003        CMP              R4, R3
+   11 00000018 3A000001        BCC              SKIP
+   12 0000001C E4023004        STR              R3, [R2], #-4
+   13 00000020 E4824004        STR              R4, [R2], #4
+   14 00000024         SKIP
+   15 00000024 E2511001        SUBS             R1, R1, #1
+   16 00000028 1AFFFFF7        BNE              INLOOP
+   17 0000002C E2500001        SUBS             R0, R0, #1
+   18 00000030 1AFFFFF3        BNE              OUTLOOP
+   19 00000034 EAFFFFFE 
+                       STOP    B                STOP
+   20 00000038                 END
+Command Line: --debug --xref --apcs=interwork --depend=code6.d -ocode6.o -IC:\K
+eil\ARM\RV31\Inc -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=code6.lst code6.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DESENDING_ORDER_SORT 00000000
+
+Symbol: DESENDING_ORDER_SORT
+   Definitions
+      At line 1 in file code6.asm
+   Uses
+      None
+Comment: DESENDING_ORDER_SORT unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file code6.asm
+   Uses
+      None
+Comment: ENTRY unused
+INLOOP 0000000C
+
+Symbol: INLOOP
+   Definitions
+      At line 7 in file code6.asm
+   Uses
+      At line 16 in file code6.asm
+Comment: INLOOP used once
+OUTLOOP 00000004
+
+Symbol: OUTLOOP
+   Definitions
+      At line 4 in file code6.asm
+   Uses
+      At line 18 in file code6.asm
+Comment: OUTLOOP used once
+SKIP 00000024
+
+Symbol: SKIP
+   Definitions
+      At line 14 in file code6.asm
+   Uses
+      At line 11 in file code6.asm
+Comment: SKIP used once
+STOP 00000034
+
+Symbol: STOP
+   Definitions
+      At line 19 in file code6.asm
+   Uses
+      At line 19 in file code6.asm
+Comment: STOP used once
+6 symbols
+337 symbols in table

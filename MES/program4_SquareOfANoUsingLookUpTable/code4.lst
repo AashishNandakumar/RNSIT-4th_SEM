@@ -1,0 +1,64 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SQ_OF_A_NO, CODE, READONLY
+    2 00000000         ENTRY
+    3 00000000 E3A00000        MOV              R0, #0
+    4 00000004 E3A01004        MOV              R1, #4
+    5 00000008 E59F2010        LDR              R2, =LOOKUP
+    6 0000000C E7D23001        LDRB             R3, [R2, R1]
+    7 00000010 EAFFFFFE 
+                       STOP    B                STOP
+    8 00000014         LOOKUP
+    9 00000014 00 01 04 
+              09 10 19 
+              24 31 40 
+              51 64            DCB              0,1,4,9,16,25,36,49,64,81,100
+   10 0000001F                 END
+              00 00000000 
+Command Line: --debug --xref --apcs=interwork --depend=code4.d -ocode4.o -IC:\K
+eil\ARM\RV31\Inc -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --predef
+ine="__EVAL SETA 1" --list=code4.lst code4.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file code4.asm
+   Uses
+      None
+Comment: ENTRY unused
+LOOKUP 00000014
+
+Symbol: LOOKUP
+   Definitions
+      At line 8 in file code4.asm
+   Uses
+      At line 5 in file code4.asm
+Comment: LOOKUP used once
+SQ_OF_A_NO 00000000
+
+Symbol: SQ_OF_A_NO
+   Definitions
+      At line 1 in file code4.asm
+   Uses
+      None
+Comment: SQ_OF_A_NO unused
+STOP 00000010
+
+Symbol: STOP
+   Definitions
+      At line 7 in file code4.asm
+   Uses
+      At line 7 in file code4.asm
+Comment: STOP used once
+4 symbols
+337 symbols in table
