@@ -5,7 +5,6 @@
 
 ## Projects:
 
-> Crafted out of pure HTML
 
 1. &nbsp; <a href="https://github.com/AashishNandakumar/RNSIT-4th_SEM/blob/main/AEC/13_06_2023/webpage1.html">Travels Website</a> (AEC)
 
