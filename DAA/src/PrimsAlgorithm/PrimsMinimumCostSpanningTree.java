@@ -10,7 +10,7 @@ public class PrimsMinimumCostSpanningTree {
     int noOfVertices;
     Scanner in;
     PrimsMinimumCostSpanningTree(){
-        in = new Scanner(System.in);
+//        in = new Scanner(System.in);
 //        System.out.println("Enter number of vertices: ");
 //        this.noOfVertices = in.nextInt();
         this.noOfVertices = 7;
@@ -23,7 +23,7 @@ public class PrimsMinimumCostSpanningTree {
                                                 {I, I, I, 8, I, 16, I, 14},
                                                 {I, I, I, I, 16, I, 20, 18},
                                                 {I, 5, I, I, I, 20, I, I},
-                                                {I, I, 10, I, 14, 18, I, I}};
+                                                {I, I, 10, I, 14, 18, I, I},};
 //        this.near = new int[this.noOfVertices];
         this.near = new int[8];
 //        this.spanningTree = new int[2][this.noOfVertices-1];
@@ -58,8 +58,8 @@ public class PrimsMinimumCostSpanningTree {
 //        pick up the min element from the cost adjacency matrix
         int min = this.I;
         int u = 0, v = 0;
-        for(int i =1;i<=this.noOfVertices;i++){
-            for(int j=i;j<=this.noOfVertices;j++){
+        for(int i = 1;i <= this.noOfVertices;i++){
+            for(int j = i;j <= this.noOfVertices;j++){
                 if(min>this.costAdjacencyMatrix[i][j]){
                    min = this.costAdjacencyMatrix[i][j];
 //                   Also keep the track of the indices of the min element
