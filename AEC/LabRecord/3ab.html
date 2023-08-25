@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function findLeftMostVowel() {
+        let inputString = prompt("Enter a string: ");
+        let vowels = "aeiouAEIOU";
+        for (let i = 0; i < inputString.length; i++) {
+          if (vowels.indexOf(inputString[i]) !== -1) {
+            alert("The left most vowel is at position: " + (i + 1));
+            return;
+          }
+        }
+        alert("No vowels found in the string!!");
+      }
+
+      function reverseNumberDigits() {
+        let inputNumber = parseInt(prompt("Enter a number: "));
+        if (!isNaN(inputNumber)) {
+          let reversedNumber = parseInt(
+            inputNumber.toString().split("").reverse().join("")
+          );
+          alert("Reversed number: " + reversedNumber);
+        } else alert("Invalid input, expected a number!");
+      }
+    </script>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <h1 style="text-align: center">String and number operations</h1>
+    <button style="margin-top: 2em" onclick="findLeftMostVowel()">
+      Find left-most vowel
+    </button>
+    <button style="margin-top: 2em" onclick="reverseNumberDigits()">
+      Reverse number digits
+    </button>
+  </body>
+</html>
