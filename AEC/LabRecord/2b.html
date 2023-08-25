@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script type="text/javascript">
+      function generateTable() {
+        let n = parseInt(prompt("Enter a no (N): "));
+        let tableContent =
+          "<table border = '1' width='100%'><tr><th>Number</th><th>Square</th></tr>";
+
+        for (let i = 1; i <= n; i++) {
+          let sq = i * i;
+          tableContent += "<tr><td>" + i + "</td><td>" + sq + "</td></tr>";
+        }
+
+        tableContent += "</table>";
+        document.write(tableContent);
+      }
+    </script>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    "
+  >
+    <h1 style="text-align: center">Number and square table generator</h1>
+    <button onclick="generateTable()">Generate table</button>
+  </body>
+</html>
