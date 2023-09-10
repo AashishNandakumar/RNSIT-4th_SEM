@@ -1,5 +1,7 @@
 package F_KruskalsAlgorithm;
 
+import java.util.Arrays;
+
 public class kruskalsMinimumCostSpanningTree {
 
     int[][] edges;
@@ -16,10 +18,13 @@ public class kruskalsMinimumCostSpanningTree {
         included = new int[vertices+2];
         set = new int[vertices+1];
         t = new int[2][vertices-1];
-        for(int i=0;i<vertices;i++){
-            included[i] = 0;
-            set[i] = -1;
-        }
+
+//        for(int i=0;i<vertices;i++){
+//            included[i] = 0;
+//            set[i] = -1;
+//        }
+        Arrays.fill(included, 0);
+        Arrays.fill(set, -1);
     }
 
     void union(int a, int b){
