@@ -14,13 +14,13 @@ public class Knapsack01DynamicProgramming {
         noOfItems = n;
         Profit = P;
         weight = w;
-        table = new int[noOfItems+1][knapsackCapacity+1];
+        table = new int[n+1][m+1];
     }
 
     void tabulaization(){
 
-        for(int i=0;i<noOfItems;i++){
-            for(int j=0;j<noOfItems;j++){
+        for(int i=0;i<=noOfItems;i++){
+            for(int j=0;j<=knapsackCapacity;j++){
                 if(i==0 || j==0)
                     table[i][j] = 0;
                 else if(weight[i] <= j){
@@ -33,11 +33,26 @@ public class Knapsack01DynamicProgramming {
         }
 
         System.out.println("Table data: ");
-        for(int i=0;i<noOfItems;i++){
-            for(int j=0;j<noOfItems;j++){
+        for(int i=0;i<=noOfItems;i++){
+            for(int j=0;j<=knapsackCapacity;j++){
                 System.out.print(table[i][j]+" ");
             }
             System.out.println();
+        }
+        decision();
+    }
+
+    void decision(){
+        int i = noOfItems, j = knapsackCapacity;
+        while(i>0 && j>0){
+            if(table[i][j] == table[i-1][j]){
+                System.out.println(i+": 0");
+                i--;
+            }else{
+                System.out.println(i+": 1");
+                i--;
+                j -= weight[i];
+            }
         }
     }
 
@@ -50,14 +65,14 @@ public class Knapsack01DynamicProgramming {
         System.out.println("Enter no of items: ");
         int n = in.nextInt();
 
-        int[] P = new int[n];
-        int[] w = new int[n];
+        int[] P = new int[n+1];
+        int[] w = new int[n+1];
 
         System.out.println("Enter profit and weight for each item: ");
-        for(int i=0;i<n;i++){
-            System.out.println("Enter profit "+(i+1));
+        for(int i=1;i<=n;i++){
+            System.out.println("Enter profit "+(i));
             P[i] = in.nextInt();
-            System.out.println("Enter weight "+(i+1));
+            System.out.println("Enter weight "+(i));
             w[i] = in.nextInt();
         }
 
