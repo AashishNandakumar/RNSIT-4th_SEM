@@ -16,9 +16,11 @@ public class SumOfSubsets {
         this.solution = new int[totalElements];
         this.currentSum = 0;
     }
+
     void solve(){
         backtrack(0);
     }
+
     void backtrack(int k){
         if(k==totalElements){
             if(currentSum == targetSum){
