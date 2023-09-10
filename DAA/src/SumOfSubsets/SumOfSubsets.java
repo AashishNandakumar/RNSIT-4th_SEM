@@ -8,6 +8,7 @@ public class SumOfSubsets {
     int targetSum;
     int currentSum;
     int totalElements;
+    boolean flag = false;
 
     SumOfSubsets(int[] inputSet, int targetSum){
         this.inputSet = inputSet;
@@ -30,6 +31,7 @@ public class SumOfSubsets {
                         System.out.print(inputSet[i]+" ");
                 }
                 System.out.println();
+                flag = true;
             }
             return;
         }
@@ -63,5 +65,10 @@ public class SumOfSubsets {
 
         SumOfSubsets obj = new SumOfSubsets(inputSet, targetSum);
         obj.solve();
+
+        if(!obj.flag){
+            System.out.println("No solution exists");
+            System.exit(-1);
+        }
     }
 }
