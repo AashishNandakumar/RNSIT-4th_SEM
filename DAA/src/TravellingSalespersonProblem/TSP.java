@@ -1,6 +1,5 @@
 package TravellingSalespersonProblem;
 
-import javax.rmi.ssl.SslRMIClientSocketFactory;
 import java.util.Scanner;
 
 public class TSP {
