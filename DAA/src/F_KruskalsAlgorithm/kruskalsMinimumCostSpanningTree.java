@@ -2,10 +2,10 @@ package F_KruskalsAlgorithm;
 
 public class kruskalsMinimumCostSpanningTree {
 
-    int edges[][];
-    int included[];
-    int set[];
-    int t[][];
+    int[][] edges;
+    int[] included;
+    int[] set;
+    int[][] t;
     int vertices;
 
     kruskalsMinimumCostSpanningTree(){
