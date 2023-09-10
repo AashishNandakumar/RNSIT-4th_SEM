@@ -26,8 +26,7 @@ public class kruskalsMinimumCostSpanningTree {
         if(set[a] < set[b]){
             set[a] += set[b];
             set[b] = a;
-        }
-        else{
+        }else{
             set[b] += set[a];
             set[a] = b;
         }
