@@ -1,6 +1,5 @@
-package FloydsWarshall_AllPairShortestPathProblem;
+package H_FloydsWarshall_AllPairShortestPathProblem;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class FloydWarshall {

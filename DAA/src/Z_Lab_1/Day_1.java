@@ -1,4 +1,4 @@
-package Lab_1;
+package Z_Lab_1;
 import java.util.*;
 
 class simplePrograms{

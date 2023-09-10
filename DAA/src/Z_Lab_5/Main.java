@@ -1,4 +1,4 @@
-package Lab_5;
+package Z_Lab_5;
 public class Main {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package HamiltonianCycles;
+package L_HamiltonianCycles;
 import java.util.*;
 public class Hamiltonian {
     static int n = 5;

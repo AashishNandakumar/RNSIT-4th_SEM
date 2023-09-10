@@ -1,4 +1,4 @@
-package Lab_2;
+package Z_Lab_2;
 import java.util.*;
 class Sorting{
 

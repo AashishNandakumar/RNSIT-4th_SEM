@@ -1,4 +1,4 @@
-package PrimsAlgorithm;
+package G_PrimsAlgorithm;
 
 import java.util.*;
 

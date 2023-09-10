@@ -1,4 +1,4 @@
-package KruskalsAlgorithm;
+package F_KruskalsAlgorithm;
 
 public class kruskalsMinimumCostSpanningTree {
 

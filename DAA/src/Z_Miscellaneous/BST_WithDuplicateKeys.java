@@ -1,5 +1,5 @@
-package Miscellaneous;
-import java.util.*;
+package Z_Miscellaneous;
+
 public class BST_WithDuplicateKeys {
     public static class Node{
         int data;

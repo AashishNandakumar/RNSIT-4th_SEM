@@ -1,4 +1,4 @@
-package GreedyKnapsackAlgorithm;
+package D_GreedyKnapsackAlgorithm;
 
 import java.util.*;
 

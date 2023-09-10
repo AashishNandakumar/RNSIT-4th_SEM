@@ -1,4 +1,4 @@
-package TravellingSalespersonProblem;
+package I_TravellingSalespersonProblem;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package SumOfSubsets;
+package K_SumOfSubsets;
 
 import java.util.Scanner;
 
