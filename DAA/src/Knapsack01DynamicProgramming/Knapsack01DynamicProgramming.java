@@ -18,7 +18,6 @@ public class Knapsack01DynamicProgramming {
     }
 
     void tabulaization(){
-
         for(int i=0;i<=noOfItems;i++){
             for(int j=0;j<=knapsackCapacity;j++){
                 if(i==0 || j==0)
