@@ -9,6 +9,7 @@ public class TSP {
     static int[][] costAdjMatrix;
     static boolean flag = false;
     static int minDist = Integer.MAX_VALUE;
+
     static void setMinTourDistance(){
         int minTempSum = 0;
         for(int i=1;i<=n;i++){
