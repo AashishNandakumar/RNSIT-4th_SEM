@@ -1,0 +1,1 @@
+-c --cpu ARM7TDMI -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "uart.o" --omf_browse "uart.crf" --depend "uart.d" "UART.c"

@@ -1,0 +1,58 @@
+ARM Linker, 4.1 [Build 894] [Evaluation]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for Stack_Top
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8.o(.ARM.Collect$$$$00000009) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    init.o(.text) refers to init.o(i.__ARM_common_call_via_r3) for __ARM_common_call_via_r3
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+
+1 unused section(s) (total 0 bytes) removed from the image.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000144, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00000144, Max: 0x00080000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000108   Code   RO            3    RESET               startup.o
+    0x00000108   0x00000000   Code   RO           18  * .ARM.Collect$$$$00000000  mc_t.l(entry.o)
+    0x00000108   0x00000004   Code   RO           21    .ARM.Collect$$$$00000001  mc_t.l(entry2.o)
+    0x0000010c   0x00000004   Code   RO           23    .ARM.Collect$$$$00000004  mc_t.l(entry5.o)
+    0x00000110   0x00000000   Code   RO           25    .ARM.Collect$$$$00000008  mc_t.l(entry7b.o)
+    0x00000110   0x0000000c   Code   RO           26    .ARM.Collect$$$$00000009  mc_t.l(entry8.o)
+    0x0000011c   0x00000004   Code   RO           22    .ARM.Collect$$$$00002712  mc_t.l(entry2.o)
+    0x00000120   0x00000020   Code   RO           27    .text               mc_t.l(init.o)
+    0x00000140   0x00000002   Code   RO           29    i.__ARM_common_call_via_r3  mc_t.l(init.o)
+    0x00000142   0x00000002   PAD
+    0x00000144   0x00000000   Data   RO           31    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x40000000, Size: 0x00000488, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x40000000   0x00000488   Zero   RW            1    STACK               startup.o
+

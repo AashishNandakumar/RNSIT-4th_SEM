@@ -1,0 +1,24 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Aashish Nandakumar\Desktop\ARM\UART\UART.uvproj
+Project File Date:  <unknown>
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling UART.c...
+linking...
+UART.axf: Error: L6218E: Undefined symbol main (referred from entry8.o).
+Target not created
+Build target 'Target 1'
+compiling UART.c...
+UART.c(10): error:  #20: identifier "U0CLR" is undefined
+UART.c(26): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling UART.c...
+UART.c(10): error:  #20: identifier "U0CLR" is undefined
+Target not created
