@@ -11,7 +11,9 @@ try:
                 file_path = os.path.join(root, file)
                 arcname = os.path.relpath(file_path, folder_path)
                 zipf.write(file_path, arcname=arcname)
+
     print(f"ZIP file '{output_zip_file}' created successfully")
+
 except FileNotFoundError:
     print(f"Folder '{folder_path}' not found")
 
