@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # create a directory to store comics
-os.makedirs("xkcd_comics", exist_ok=True)
+os.makedirs("DependentFilesForLab_9a", exist_ok=True)
 
 # start the comic no
 comic_num = 1
@@ -33,7 +33,7 @@ while True:
                 file_extension = os.path.splitext(image_url)[1]
 
                 # save the image to the xkcd directory
-                with open(f'xkcd_comics/{comic_num}{file_extension}', 'wb') as file:
+                with open(f'DependentFilesForLab_9a/{comic_num}{file_extension}', 'wb') as file:
                     file.write(image_response.content)
                 print(f"Downloaded comic {comic_num}")
             else:
