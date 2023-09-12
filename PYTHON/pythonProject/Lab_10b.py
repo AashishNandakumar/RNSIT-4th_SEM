@@ -17,7 +17,7 @@ def fetch_and_format_weather(json_file):
     except FileNotFoundError:
         print(f"file {json_file} does not exist")
     except KeyError:
-        print("JSON file does not contain the expected weather")
+        print("JSON file does not contain the expected weather information")
 
 
 json_file_path = "WeatherDataDemo/weather_data.json"
