@@ -20,5 +20,5 @@ def fetch_and_format_weather(json_file):
         print("JSON file does not contain the expected weather")
 
 
-json_file_path = "weather_data.json"
+json_file_path = "WeatherDataDemo/weather_data.json"
 fetch_and_format_weather(json_file_path)
