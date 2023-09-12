@@ -34,8 +34,8 @@ def write_data_to_spreadsheet(filename, sheet_name, data):
     workbook.close()
 
 
-input_filename = 'Book1.xlsx'
-output_filename = 'Book1.xlsx'
+input_filename = 'DependentFilesForLab_9b/Book1.xlsx'
+output_filename = 'DependentFilesForLab_9b/Book1.xlsx'
 input_sheet_name = 'Sheet1'
 output_sheet_name = 'Sheet1'
 
