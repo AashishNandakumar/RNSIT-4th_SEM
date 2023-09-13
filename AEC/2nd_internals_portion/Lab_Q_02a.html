@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Fibonacci Numbers</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finonacci numbers</title>
     <script>
       function generateFibonacci() {
-        var n = parseInt(
-          prompt("Enter the number of Fibonacci numbers to generate:")
-        );
-        var result = document.getElementById("result");
+        let n = parseInt(prompt("Enter no of fibonacci numbers to generate: "));
+        let result = document.getElementById("result");
 
         if (isNaN(n) || n < 1) {
-          alert("Please enter a valid positive number.");
+          alert("Please enter a valid positive number!");
           return;
         }
 
-        var fibonacciNumbers = [0, 1];
+        let finonacciNumbers = [0, 1];
 
-        for (var i = 2; i < n; i++) {
-          var nextFib = fibonacciNumbers[i - 1] + fibonacciNumbers[i - 2];
-          fibonacciNumbers.push(nextFib);
+        for (let i = 2; i < n; i++) {
+          let nextFib = finonacciNumbers[i - 1] + finonacciNumbers[i - 2];
+          finonacciNumbers.push(nextFib);
         }
 
         result.textContent =
-          "First " + n + " Fibonacci numbers: " + fibonacciNumbers.join(", ");
+          "First " + n + " Fibonacci numbers: " + finonacciNumbers.join(", ");
       }
     </script>
   </head>
   <body>
     <h1>Fibonacci Numbers</h1>
-    <button onclick="generateFibonacci()">Generate Fibonacci Numbers</button>
+    <button onclick="generateFibonacci()">Generate fibonacci Numbers</button>
     <p id="result"></p>
   </body>
 </html>
