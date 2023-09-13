@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USN Validation</title>
+    <script>
+      function validateUSN() {
+        let usnInput = document.getElementById("usn").value;
+        let usnRegex = /^[1-4][A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+
+        if (!usnRegex.test(usnInput)) {
+          alert("Invalid Usn format! Please enter a valid one");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="validateUSN()">
+      <label for="usn">Enter USN: </label>
+      <input type="text" id="usn" required />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
