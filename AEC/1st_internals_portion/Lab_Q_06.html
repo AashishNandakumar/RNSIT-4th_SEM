@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Details and Educational Qualifications</title>
+  </head>
+  <body>
+    <h1>Personal Details</h1>
+    <form action="#" method="post">
+      <label for="username">User Name:</label>
+      <input type="text" id="username" name="username" required /><br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" name="contact" required /><br /><br />
+
+      <label for="email">E-mail ID:</label>
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br /><br />
+
+      <label for="qualification">Educational Qualification:</label>
+      <select id="qualification" name="qualification">
+        <option value="high_school">High School</option>
+        <option value="college">College</option>
+        <option value="university">University</option></select
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
