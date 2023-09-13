@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binary search</title>
+    <script>
+      function binarySearch() {
+        let numbers = [2, 4, 7, 10, 14, 15, 20, 25, 30, 35];
+        let target = parseInt(document.getElementById("target").value);
+        let low = 0;
+        let high = numbers.length - 1;
+
+        while (low <= high) {
+          let mid = Math.floor((low + high) / 2);
+          if (numbers[mid] === target) {
+            alert("Number found at index " + mid);
+            return;
+          } else if (numbers[mid] < target) low = mid + 1;
+          else high = mid - 1;
+        }
+
+        alert("Number not found");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Binary Search</h1>
+    <label for="target">Enter a number to serch: </label>
+    <input id="target" type="number" />
+    <button onclick="binarySearch()">Search</button>
+  </body>
+</html>
