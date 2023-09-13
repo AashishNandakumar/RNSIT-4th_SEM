@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlapping Images</title>
+    <style>
+      .img-container {
+        position: relative;
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: z-index 0.3s ease, transform 0.3s ease;
+      }
+
+      .image:hover {
+        z-index: 1;
+        transform: scale(1.1);
+      }
+
+      #img1 {
+        left: 0;
+      }
+
+      #img2 {
+        left: 50px;
+        top: 25px;
+      }
+
+      #img3 {
+        left: 100px;
+        top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-container">
+      <img
+        src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"
+        alt="image1"
+        class="image"
+        id="img1"
+      />
+      <img
+        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+        alt="image2"
+        class="image"
+        id="img2"
+      />
+      <img
+        src="https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg"
+        alt="image3"
+        class="image"
+        id="img3"
+      />
+    </div>
+  </body>
+</html>
