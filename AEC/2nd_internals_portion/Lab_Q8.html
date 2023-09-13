@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <script>
+      function calculate() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let operation = document.getElementById("operation").value;
+        let result = document.getElementById("result");
+
+        if (isNaN(num1) || isNaN(num2)) {
+          result.textContent = "Please enter valid numbers";
+          return;
+        }
+        try {
+          switch (operation) {
+            case "add":
+              result.textContent = "Result: " + (num1 + num2);
+              break;
+            case "sub":
+              result.textContent = "Result: " + (num1 - num2);
+              break;
+            case "mul":
+              result.textContent = "Result: " + num1 * num2;
+              break;
+            case "divi":
+              result.textContent = "Result: " + num1 / num2;
+              break;
+            default:
+              result.textContent = "Invalid operation";
+          }
+        } catch (Error) {
+          alert("Invalid operation result : " + Error);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Simple Calculator</h1>
+
+    <label for="num1">Number 1: </label>
+    <input type="number" id="num1" />
+    <br />
+
+    <label for="num2">Number 2: </label>
+    <input type="number" id="num2" />
+    <br />
+
+    <label for="operation">Operation: </label>
+    <select id="operation">
+      <option value="add">Addition</option>
+      <option value="sub">Subtraction</option>
+      <option value="mul">Multiplication</option>
+      <option value="divi">Division</option>
+    </select>
+    <br />
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+  </body>
+</html>
