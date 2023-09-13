@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Animation</title>
+    <script>
+      let fontSize = 10;
+      let growing = true;
+
+      function changeTextSize() {
+        let textElement = document.getElementById("text");
+
+        if (growing) {
+          fontSize += 1;
+          textElement.style.color = "red";
+          if (fontSize >= 50) {
+            growing = false;
+            textElement.textContent = "TEXT-SHRINKING";
+            textElement.style.color = "blue";
+          }
+        } else {
+          fontSize -= 1;
+          if (fontSize <= 10) {
+            growing = true;
+            textElement.textContent = "TEXT-GROWING";
+            textElement.style.color = "red";
+          }
+        }
+
+        textElement.style.fontSize = fontSize + "pt";
+      }
+
+      setInterval(changeTextSize, 100);
+    </script>
+  </head>
+  <body>
+    <div id="text" style="font-size: 10px; color: red">TEXT-GROWING</div>
+  </body>
+</html>
