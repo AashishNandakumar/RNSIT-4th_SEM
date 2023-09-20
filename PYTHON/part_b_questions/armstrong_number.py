@@ -10,5 +10,5 @@ def is_armstrong_number(num):
     return armstrong_sum == num
 
 
-num = int(input("Enter number"))
-print(f"The give number is an Armstrong number: {is_armstrong_number(num)}")
+number = int(input("Enter number"))
+print(f"The give number is an Armstrong number: {is_armstrong_number(number)}")
