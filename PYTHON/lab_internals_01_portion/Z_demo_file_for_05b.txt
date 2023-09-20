@@ -1,0 +1,12 @@
+This is a sample text file.
+It contains some lines of text for demonstration purposes.
+
+Line 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Line 2: Nulla nec lectus id risus ullamcorper suscipit.
+Line 3: Sed cursus, odio in facilisis feugiat, velit velit faucibus lectus.
+
+Email addresses in this file: john.doe@example.com and alice.smith@gmail.com
+
+Phone numbers in this file: +1234567890 and +9876543210
+
+End of file.
