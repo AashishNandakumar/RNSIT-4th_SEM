@@ -1,23 +1,22 @@
-num = int(input("Enter a number: "))
-
-num_str = str(num)
-
-is_palindrome = num_str == num_str[::-1]
-
-digit_count = dict()
-for digit in num_str:
-    if digit.isdigit():
-        if digit in digit_count:
-            digit_count[digit] += 1
-        else:
-            digit_count[digit] = 1
-
-if is_palindrome:
-    print(f"{num} is a palindrome")
-else:
-    print(f"{num} is a palindrome")
+def binary_to_decimal(binary_str):
+    try:
+        decimal_num = int(binary_str, 2)
+        return decimal_num
+    except ValueError:
+        return "Invalid binary input"
 
 
-print("digit count: ")
-for digit, count in digit_count.items():
-    print(f"Digit {digit}: {count} times")
+def octal_to_hexadecimal(octal_str):
+    try:
+        decimal_num = int(octal_str, 8)
+        hexadecimal_str = hex(decimal_num)
+        return hexadecimal_str
+    except ValueError:
+        return "Invalid octal input"
+
+
+bin_str = input("Enter the Binary Number")
+print(f"Binary to Decimal is {binary_to_decimal(bin_str)}")
+
+oct_str = input("Enter the octal Number")
+print(f"Octal to Decimal is {octal_to_hexadecimal(oct_str)}")
